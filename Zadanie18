@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int q, w, e, r, a, b, c, m, n, l;
+
+int main()
+{
+    cout << "Wprowadz pierwsza liczbe ciagu" << endl;
+    cin >> q;
+    cout << "Wprowadz druga liczbe ciagu" << endl;
+    cin >> w;
+    cout <<"Wprowadz trzecia liczbe ciagu" << endl;
+    cin >> e;
+    cout << "Wprowadz czwarta liczbe ciagu" << endl;
+    cin >> r;
+    a= w-q;
+    b= e-w;
+    c= r-e;
+    m= w/q;
+    n= e/w;
+    l= r/e;
+
+    if (a==b&&b==c&&a==c)
+    {
+        cout << "Ciag jest arytmetyczny" << endl;
+
+    }
+    else
+    {
+        cout << "Ciag nie jest arytmetyczny" << endl;
+
+    }
+    if (m==n&&n==l&&m==l)
+    {
+         cout << "Ciag jest geometryczny" << endl;
+    }
+    else
+    {
+        cout << "Ciag nie jest geometryczny" << endl;
+    }
+return 0;
+}
