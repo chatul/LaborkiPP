@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    srand(time(NULL));
+    cout << "Oblicz wspolrzedne wierzcholka paraboli dla:" << endl;
+    float a= -10.0+20.0*rand()/(RAND_MAX);
+    float b= -10.0+20.0*rand()/(RAND_MAX);
+    float c= -10.0+20.0*rand()/(RAND_MAX);
+    float d= pow(b,2)-4*a*c;
+    double p= (-b)/(2*a);
+    double q= (-d)/(4*a);
+    cout << "a=" << a << endl;
+    cout << "b=" << b << endl;
+    cout << "c=" << c << endl;
+    cout << endl;
+    cout << "Wspolrzedne wierzcholka:" << endl;
+    cout<<setprecision(3)<<p=<<"\t"<<setprecision(4)<<q=<<endl;
+    cout << "p=" << p << "\t" << "q=" <<  q << endl;
+
+    return 0;
+}
