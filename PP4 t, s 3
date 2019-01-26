@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    float a[10][15];
+    float swsz = 0, swew=0, szew = 0, st;
+    int m, n;
+    cout<<"Podaj dane do tablicy dwuwymiarowej: "<<endl;
+    cout<<"n="; cin>>n;
+    cout<<"m="; cin>>m;
+
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=m; j++)
+         {
+        cout<<"Podaj ["<<i<<"]["<<j<<"]:";
+        cin>>a[i][j];
+        swsz=swsz+a[i][j];
+         }
+          }
+    cout << "Suma wszystkich elementow:"<<swsz<<endl;
+     for(int i=2; i<m; i++)
+     {
+       for(int j=2; j<n; j++)
+        {
+        swew=swew+a[i][j];
+        }
+        }
+    cout << "Suma elementow wewnetrznych:"<<swew<<endl;
+    szew=swsz-swew;
+    cout << "Suma elementow zewnetrznych:"<<szew<<endl;
+    st=swew/szew;
+    cout<<"Stosunek sumy elementow wewnetrzych do zewnetrznych: "<<st<<endl;
+
+    return 0;
+}
